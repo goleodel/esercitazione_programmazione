@@ -1,4 +1,5 @@
-/*! \file CRectangle.cpp
+
+/* \file CRectangle.cpp
     \brief implementation of class Rectangle
     \author Paolo Gastaldo
 */
@@ -23,7 +24,7 @@ Rectangle::Rectangle() : Shape()
 /// @param py position in the grid (y)
 /// @param w width of the bounding box
 /// @param h height of the bounding box
-Rectangle::Rectangle(float px, float py, float w, float h) : Shape(px, py, w, h)
+Rectangle::Rectangle(float px, float py, float w, float h, float sf) : Shape(px, py, w, h, sf)
 {
     cout << "Rectangle - constructor" << endl;
 }
@@ -138,6 +139,7 @@ void Rectangle::Dump()
     cout << "  Figure perimeter:    " << GetPerimeter() << endl;
     cout << "  Text:                " << (text ? text : "(null)") << endl;
 	cout << endl;
+
 }
 
 
