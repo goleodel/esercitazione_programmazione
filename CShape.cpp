@@ -1,6 +1,6 @@
-/*! \file CShape.h
+/*! \file CShape.cpp
     \brief implementation of class Shape
-	\author Iannone-Delfini
+	\author Delfini-Iannone
 */
 
 #include "CShape.h"
@@ -185,8 +185,14 @@ void Shape::Reset()
    
 void Shape::Scale(float sf) 
 {
+    if (sf < 0) {
+            ErrorMessage("Errore di scalamento fattore <0");
+            return;
+        }
 	height = height*sf; 
     width = width*sf;
+    
+
 }
 
 /* ----------------------------
