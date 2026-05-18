@@ -17,7 +17,7 @@ public:
     /// @name CONSTRUCTORS / DESTRUCTOR
     /// @{
     Rectangle();
-    Rectangle(float px, float py, float w, float h);
+    Rectangle(float px, float py, float w, float h, float sf);
     Rectangle(const Rectangle &r);
 
     ~Rectangle();
