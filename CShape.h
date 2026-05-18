@@ -1,6 +1,6 @@
 /*! \file CShape.h
     \brief Declaration of the base class Shape
-	\author Paolo Gastaldo
+	\author Iannone-Delfini
 */
 
 #ifndef SHAPE_H
@@ -23,6 +23,9 @@ protected:
     float height;
     float width;
 
+    /// scale of the boundibg box
+    float sf;
+
     /// optional text inside the shape
     char* text;
 
@@ -31,10 +34,10 @@ public:
     /// @name CONSTRUCTORS / DESTRUCTOR
     /// @{
     Shape();
-    Shape(float px, float py, float w, float h);
+    Shape(float px, float py, float w, float h, float sf);
     Shape(const Shape &r);
 
-    ~Shape();
+    virtual ~Shape();
     /// @}
 
 
