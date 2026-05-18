@@ -17,7 +17,7 @@ public:
     /// @name CONSTRUCTORS / DESTRUCTOR
     /// @{
     Rhombus();
-    Rhombus(float px, float py, float w, float h);
+    Rhombus(float px, float py, float w, float h, float sf);
     Rhombus(const Rhombus &r);
 
     ~Rhombus();
