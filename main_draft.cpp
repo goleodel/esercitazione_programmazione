@@ -4,6 +4,7 @@
 #include "CShape.h"
 #include "CRectangle.h"
 #include "CRhombus.h"
+#include  "CRightTriangle.h"
 
 using namespace std;
 
@@ -17,13 +18,20 @@ int main()
     cout << "===== TEST GERARCHIA SHAPE =====" << endl;
 
     // 1. Creazione figure
-    shapes[nShapes++] = new Rectangle(0, 0, 10, 5);
-    shapes[nShapes++] = new Rhombus(2, 2, 10, 6);
-
+    shapes[nShapes++] = new Rectangle(0, 0, 10, 5,0.5);
+    shapes[nShapes++] = new Rectangle(0, 0, 10, 5,1);
+    shapes[nShapes++] = new Rhombus(2, 2, 10, 6,0.5);
+    shapes[nShapes++] = new Rhombus(2, 2, 10, 6, 1);
+    shapes[nShapes++] = new RightTriangle (6, 8, 3, 5, 0.5);
+    shapes[nShapes++] = new RightTriangle (6, 8, 3, 5, 1);
 
     // 2. Impostazione testo
     shapes[0]->SetText("rettangolo");
-    shapes[1]->SetText("rombo");
+    shapes[1]->SetText("rettangolo");
+    shapes[2]->SetText("rombo");
+    shapes[3]->SetText("rombo");
+    shapes[4]->SetText("Triangolo");
+    shapes[5]->SetText("Triangolo");
 
 
     // 3. Dump polimorfico
@@ -37,6 +45,8 @@ int main()
     
 
     cout << endl << "===== FINE TEST =====" << endl;
-
+    for (int i = 0; i < nShapes; i++) {
+        delete shapes[i];
+    }
     return 0;
 }
