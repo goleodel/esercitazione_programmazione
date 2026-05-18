@@ -1,3 +1,4 @@
+
 /*! \file CRhombus.cpp
     \brief implementation of class Rhombus
     \author Delfini-Iannone
@@ -24,7 +25,7 @@ Rhombus::Rhombus() : Shape()
 /// @param py position in the grid (y)
 /// @param w width of the bounding box
 /// @param h height of the bounding box
-Rhombus::Rhombus(float px, float py, float w, float h) : Shape(px, py, w, h)
+Rhombus::Rhombus(float px, float py, float w, float h, float sf) : Shape(px, py, w, h, sf)
 {
     cout << "Rhombus - constructor" << endl;
 }
@@ -154,4 +155,3 @@ void Rhombus::Dump()
     cout << "  Figure perimeter:      " << GetPerimeter() << endl;
     cout << "  Text:                  " << (text ? text : "(null)") << endl;
 }
-
