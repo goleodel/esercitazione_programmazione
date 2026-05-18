@@ -40,17 +40,18 @@ Shape::Shape()
 /// @param py position in the grid (y)
 /// @param w width of the bounding box
 /// @param h height of the bounding box
-Shape::Shape(float px, float py, float w, float h)
+/// @param sf scale of the bounding box
+Shape::Shape(float px, float py, float w, float h, float sf)
 {
 	cout << "Shape - constructor" << endl;
-	
 	text = nullptr;
     Init();
 	
 	SetPosition(px,py);
-	
     SetWidth(w);
     SetHeight(h);
+    Scale(sf);
+
 }
 
 /// @brief copy constructor
@@ -130,6 +131,7 @@ void Shape::Init()
     y = 0.0;
     width = 0.0;
     height = 0.0;
+    sf = 1.0;
 
     if (text == nullptr) {
         text = new char[TEXTSIZE];
@@ -171,6 +173,7 @@ void Shape::Reset()
     height = 0.0;
     x = 0.0;
     y = 0.0;
+    sf = 1;
 }
 
 /* ----------------------------
@@ -182,7 +185,8 @@ void Shape::Reset()
    
 void Shape::Scale(float sf) 
 {
-	// TO DO
+	height = height*sf; 
+    width = width*sf;
 }
 
 /* ----------------------------
