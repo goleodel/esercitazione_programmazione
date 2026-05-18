@@ -1,7 +1,7 @@
 
 /* \file CRectangle.cpp
     \brief implementation of class Rectangle
-    \author Paolo Gastaldo
+    \author Delfini-Iannone
 */
 
 #include "CRectangle.h"
@@ -141,6 +141,7 @@ void Rectangle::Dump()
 	cout << endl;
 
 }
+
 
 
 
